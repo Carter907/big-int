@@ -1,15 +1,10 @@
 #include "bigint.h"
-#include <iostream>
-
-struct g {
-  int n;
-  char l;
-};
 
 int main() {
 
-  BigInt<50> n{};
-  std::cout << n.to_string() << '\n';
+  using namespace std::string_literals;
+
+  big_int<6> n = "12347927349875012348"s;
 
   return 0;
 }
