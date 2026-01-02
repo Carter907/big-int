@@ -1,6 +1,7 @@
 #pragma once
 
 #include <bitset>
+#include <format>
 
 template <std::size_t sz> class big_int {
 
@@ -10,10 +11,14 @@ template <std::size_t sz> class big_int {
   std::bitset<8 * sz> str_to_rep(std::string str) {
     // TODO: Convert a string number into a 2's complement binary
     // representation.
+
+    return {};
   }
 
   std::string rep_to_str(std::bitset<8 * sz> bts) {
     // TODO: Convert a bitset 2's complement to a string decimal number.
+
+    return {};
   }
 
 public:
