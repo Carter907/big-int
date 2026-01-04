@@ -1,17 +1,18 @@
 #include "bigint.h"
+#include "util.h"
 #include <format>
 #include <iostream>
 
-std::string dtob(std::string_view dec) {
-  // repeated divison on a string? How is this going to work?
-  // I need to
-}
-
 int main() {
 
-  using namespace std::string_literals;
+  // using namespace std::string_literals;
+  //
+  // big_int<1> big_i = "123"s;
+  //
+  auto [q, r] = string_div2("7917349172943721492174291412749");
 
-  big_int<1> big_i = "123"s;
+  std::cout << q << '\n';
+  std::cout << r << '\n';
 
   return 0;
 }
