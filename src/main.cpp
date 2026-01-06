@@ -7,9 +7,9 @@ int main() {
 
   // using namespace std::string_literals;
   //
-  // big_int<1> big_i = "123"s;
+  // big_int<1> big_i = "61"s;
   //
-  auto [q, r] = string_div2("7917349172943721492174291412749");
+  auto [q, r] = string_div2("61");
 
   std::cout << q << '\n';
   std::cout << r << '\n';
