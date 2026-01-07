@@ -7,6 +7,7 @@
 #include <string_view>
 #include <string>
 #include <vector>
+#include <sstream>
 
 inline std::size_t vectouint(std::vector<char> chars) {
   std::size_t res{};
@@ -43,4 +44,13 @@ inline std::pair<std::string, std::size_t> string_div2(std::string_view sv) {
   return {std::string(quot.begin(), quot.end()), vectouint(digits)};
 }
 
+inline std::string string_add(std::string_view op1, std::string_view op2) {
+  std::stringstream ss{};
+  std::size_t carry{};
 
+  if (op1.size() > op2.size()) {
+      
+  } else {
+
+  }
+}
