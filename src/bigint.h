@@ -2,6 +2,7 @@
 
 #include <bitset>
 #include <format>
+#include "util.h"
 
 template <std::size_t sz> class big_int {
 
@@ -11,8 +12,19 @@ template <std::size_t sz> class big_int {
   std::bitset<8 * sz> str_to_rep(std::string str) {
     // TODO: Convert a string number into a 2's complement binary
     // representation.
+    std::bitset<8 * sz> res{};
+    auto i {0u};
 
-    return {};
+    while (!str.empty()) {
+
+      auto [q, r] = string_div2(str);
+      std::cout << "q: " << q << "\nr: " << r << '\n';
+      str = q;
+      if (r) res.flip(i);
+      i++;
+    }
+    
+    return res;
   }
 
   std::string rep_to_str(std::bitset<8 * sz> bts) {

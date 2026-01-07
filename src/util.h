@@ -1,3 +1,5 @@
+#pragma once
+
 #include <cmath>
 #include <iostream>
 #include <iterator>
@@ -34,7 +36,7 @@ inline std::pair<std::string, std::size_t> string_div2(std::string_view sv) {
       digits.clear();
       char nxt_dig = '0' + static_cast<char>(n - static_cast<std::size_t>(quot.back() - '0') * 2);
       digits.push_back(nxt_dig);
-    } else if (!digits.empty())
+    } else if (!quot.empty())
       quot.push_back('0');
   }
 
